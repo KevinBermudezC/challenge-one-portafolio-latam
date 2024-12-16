@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
 }
 
+
 ol, ul, li {
     list-style: none;
 }
@@ -28,9 +29,10 @@ a {
 .cabecera {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--color-de-fondo-menu);
+    align-items: baseline;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
 }
 
 .cabecera__logo {
@@ -50,22 +52,132 @@ a {
     font-size: 0.9rem;
 }
 /* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.presentacion__foto{
+    margin-top: 1rem;
+}
+.presentacion__contenedor{
+    display: flex;
+    flex-direction: column;
+}
+.presentacion__titulo{
+    font-size: 2.5rem;
 
+}
+.presentacion__subtitulo{
+
+}
+.redes{
+    display: flex;
+    padding: 0;
+    gap: 1.5rem;
+
+}
+.redes__img{}
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.sobre-mi__titulo{
+    font-size: 2rem;
+    margin-bottom: 1rem ;
 
-
+}
+.sobre-mi__texto{
+    font-size: 1.1rem;
+    margin-right: 20rem;
+}
 /*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades{
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.habilidades__titulo{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
 
+}
+.habilidades__lista{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.habilidades__elemento{
+    background-color: var(--color-de-fondo-menu);
+
+}
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones{
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
 
+}
 
+.aficiones__titulo{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.aficiones__lista{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.aficiones__elemento{
+    background-color: var(--color-de-fondo-menu);
+}
+/*------------------------------ Formacion Academica --------------------------------*/
+.formacion{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+.formacion__titulo{
+
+}
+.formacion__lista{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.formacion__icono{
+    width: 30rem;
+}
 /*------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
 
+.proyectos__imagen{
+    width: 10rem;
+}
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
-
+.contacto{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
@@ -74,7 +186,7 @@ a {
     .cabecera {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
     }
 
     .cabecera__logo {
@@ -95,6 +207,17 @@ a {
     .navegacion__elemento a {
         font-size: 1rem;
     }
+
+    .presentacion{
+        flex-direction: row-reverse;
+    }
+    .habilidades__lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .aficiones__lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Pantallas grandes */
@@ -106,5 +229,13 @@ a {
 
     .navegacion__elemento a {
         font-size: 1.1rem;
+    }
+
+    .habilidades__lista {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .aficiones__lista {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
