@@ -131,20 +131,34 @@
 
         <!-- Sección de Contacto -->
         <section class="contacto" id="contacto">
-            <h2 class="contacto__titulo">Contacto</h2>
-            <form class="contacto__formulario">
-                <label >
-                    <input class="contacto__campo" type="text" placeholder="Nombre">
-                </label>
-                <label>
-                    <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-                </label>
-                <label>
-                    <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-                </label>
-                <button class="contacto__boton" type="submit">Enviar</button>
-            </form>
+            <img class="contacto__icono" src="assets/contact_image.png" alt="imagen de contacto">
+            <div class="contacto__contenido">
+                <h2 class="contacto__titulo">Contacto</h2>
+                <p class="contacto__descripcion">¿Quieres contactarme?<br>Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+                <form class="contacto__formulario">
+                    <div class="campo-form">
+                        <label for="nombre">Nombre</label>
+                        <input class="contacto__campo" type="text" id="nombre" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="email">Email</label>
+                        <input class="contacto__campo" type="email" id="email" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="asunto">Asunto</label>
+                        <input class="contacto__campo" type="text" id="asunto" required>
+                    </div>
+                    <div class="campo-form">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea class="contacto__campo contacto__campo--textarea" id="mensaje" required></textarea>
+                    </div>
+                    <button class="contacto__boton" type="submit">Enviar mensaje</button>
+                </form>
+            </div>
         </section>
+        <footer class="footer">
+            <p class="footer__texto">© 2024 Kevin Bermúdez. Todos los derechos reservados.</p>
+        </footer>
 </body>
     <script src="script.js"></script>
 </html>
